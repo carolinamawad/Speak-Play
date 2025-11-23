@@ -5,6 +5,7 @@
   <title>¿Te atreves a hablar?</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <div class="container">
@@ -18,74 +19,150 @@ Esta sección te invita a reflexionar, responder un mini test interactivo y dar 
 
 <h2>🧪 Mini Test Diagnóstico</h2>
 
-<div class="card">
+<!-- ESTILOS DEL TEST -->
+<style>
+  .question-block {
+    background-color: var(--sepia-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  .feedback {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--green-dark);
+    display: none;
+  }
+  select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--green-dark);
+    background-color: #fff;
+  }
+</style>
+
+<!-- SCRIPT PARA MOSTRAR FEEDBACK SEGÚN SELECCIÓN -->
+<script>
+  function mostrarFeedback(idPregunta) {
+    const select = document.getElementById("p" + idPregunta);
+    const feedback = document.getElementById("f" + idPregunta);
+
+    if (select.value !== "") {
+      feedback.style.display = "block";
+    } else {
+      feedback.style.display = "none";
+    }
+  }
+</script>
+
+
+<!-- PREGUNTA 1 -->
+<div class="question-block">
   <p><strong>Pregunta 1:</strong> ¿Qué sientes cuando tienes que hablar inglés en clase?</p>
-  <ul>
-    <li>Un poco de nervios</li>
-    <li>Mucho miedo</li>
-    <li>Prefiero no hablar</li>
-    <li>Confianza y emoción</li>
-  </ul>
-  👉 <em>Retroalimentación: Sentir nervios es común, pero reconocerlo es el primer paso.</em>
+
+  <select id="p1" onchange="mostrarFeedback(1)">
+    <option value="">Selecciona una opción</option>
+    <option>Un poco de nervios</option>
+    <option>Mucho miedo</option>
+    <option>Prefiero no hablar</option>
+    <option>Confianza y emoción</option>
+  </select>
+
+  <p id="f1" class="feedback">
+    👉 Retroalimentación: Sentir nervios es común, pero reconocerlo es el primer paso para avanzar.
+  </p>
 </div>
 
-<div class="card">
+
+<!-- PREGUNTA 2 -->
+<div class="question-block">
   <p><strong>Pregunta 2:</strong> ¿Participas en actividades orales como juegos de roles o karaoke?</p>
-  <ul>
-    <li>Nunca</li>
-    <li>A veces, si me siento cómodo/a</li>
-    <li>Sí, me encantan</li>
-    <li>Solo si me obligan</li>
-  </ul>
-  👉 <em>Retroalimentación: Participar voluntariamente indica apertura al aprendizaje oral.</em>
+
+  <select id="p2" onchange="mostrarFeedback(2)">
+    <option value="">Selecciona una opción</option>
+    <option>Nunca</option>
+    <option>A veces, si me siento cómodo/a</option>
+    <option>Sí, me encantan</option>
+    <option>Solo si me obligan</option>
+  </select>
+
+  <p id="f2" class="feedback">
+    👉 Retroalimentación: Participar voluntariamente indica apertura al aprendizaje oral.
+  </p>
 </div>
 
-<div class="card">
+
+<!-- PREGUNTA 3 -->
+<div class="question-block">
   <p><strong>Pregunta 3:</strong> ¿Qué te impide hablar inglés con más frecuencia?</p>
-  <ul>
-    <li>No sé qué decir</li>
-    <li>Miedo a equivocarme</li>
-    <li>Nada, lo hago seguido</li>
-    <li>Vergüenza</li>
-  </ul>
-  👉 <em>Identificar el obstáculo permite diseñar estrategias para superarlo.</em>
+
+  <select id="p3" onchange="mostrarFeedback(3)">
+    <option value="">Selecciona una opción</option>
+    <option>No sé qué decir</option>
+    <option>Miedo a equivocarme</option>
+    <option>Nada, lo hago seguido</option>
+    <option>Vergüenza</option>
+  </select>
+
+  <p id="f3" class="feedback">
+    👉 Retroalimentación: Identificar el obstáculo permite diseñar estrategias para superarlo.
+  </p>
 </div>
 
-<div class="card">
+
+<!-- PREGUNTA 4 -->
+<div class="question-block">
   <p><strong>Pregunta 4:</strong> ¿Cómo reaccionas si no entienden lo que dices en inglés?</p>
-  <ul>
-    <li>Me quedo callado/a</li>
-    <li>Me frustro</li>
-    <li>Cambio de idioma</li>
-    <li>Lo intento de nuevo</li>
-  </ul>
-  👉 <em>Intentarlo de nuevo demuestra resiliencia y deseo de comunicar.</em>
+
+  <select id="p4" onchange="mostrarFeedback(4)">
+    <option value="">Selecciona una opción</option>
+    <option>Me quedo callado/a</option>
+    <option>Me frustro</option>
+    <option>Cambio de idioma</option>
+    <option>Lo intento de nuevo</option>
+  </select>
+
+  <p id="f4" class="feedback">
+    👉 Retroalimentación: Intentarlo de nuevo demuestra resiliencia y deseo de comunicar.
+  </p>
 </div>
 
-<div class="card">
+
+<!-- PREGUNTA 5 -->
+<div class="question-block">
   <p><strong>Pregunta 5:</strong> ¿Crees que puedes mejorar tu expresión oral en inglés?</p>
-  <ul>
-    <li>Tal vez, pero me cuesta</li>
-    <li>Sí, con práctica</li>
-    <li>No, es muy difícil</li>
-    <li>No estoy seguro/a</li>
-  </ul>
-  👉 <em>La creencia en tu capacidad es clave para avanzar.</em>
+
+  <select id="p5" onchange="mostrarFeedback(5)">
+    <option value="">Selecciona una opción</option>
+    <option>Tal vez, pero me cuesta</option>
+    <option>Sí, con práctica</option>
+    <option>No, es muy difícil</option>
+    <option>No estoy seguro/a</option>
+  </select>
+
+  <p id="f5" class="feedback">
+    👉 Retroalimentación: La creencia en tu capacidad es clave para el progreso.
+  </p>
 </div>
 
-<h2>💡 Recursos para superar el miedo</h2>
+
+
+<h2>💡 Recursos para superar el miedo a hablar en inglés</h2>
 
 <ul>
-  <li><strong>Storynory</strong> – Audio historias gratuitas: https://www.storynory.com/</li>
-  <li><strong>Sing King Karaoke</strong> – Karaoke en inglés: https://www.youtube.com/singkingkaraoke</li>
+  <li><strong>Storynory</strong> – Free Audio Stories for Kids: https://www.storynory.com/</li>
+  <li><strong>Sing King Karaoke</strong>: https://www.youtube.com/singkingkaraoke</li>
   <li><strong>Top 50 Karaoke Playlist</strong>: https://www.youtube.com/playlist?list=PL8D4Iby0Bmm9y57_K3vBvkZiaGjIXD_x5</li>
   <li><strong>British Council Kids – Listen & Watch</strong>: http://learnenglishkids.britishcouncil.org/listen-watch</li>
   <li><strong>BBC Learning English – YouTube</strong>: https://www.youtube.com/c/BBCLearningEnglish</li>
 </ul>
 
+<br>
+
 <a href="index.html" class="btn">Volver a la página principal</a>
 
 </div>
+
 </body>
 </html>
-
