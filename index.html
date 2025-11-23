@@ -2,39 +2,60 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Speak & Play - Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speak & Play</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #f4f1e8; /* Sepia suave */
+      color: #2d3b2a; /* Verde oscuro */
+    }
+  </style>
 </head>
-<body>
 
-<div class="container">
+<body class="font-sans leading-relaxed">
 
-  <h1>✨ Bienvenidos a Speak & Play</h1>
+  <div class="flex flex-col items-center justify-center max-w-4xl mx-auto p-6 text-center">
 
-  <p>
-    ¿Te imaginas una plataforma donde hablar inglés sea tan divertido como jugar, cantar o contar historias?  
-    <strong>Speak & Play</strong> es una propuesta gamificada y digital para transformar la forma en que los estudiantes de 9 a 12 años desarrollan su competencia oral en inglés.
-  </p>
-  
-<div class="mt-4 space-y-2 text-lg">
-  <p>🎮 Retos, juegos de roles, karaoke y storytelling se combinan para promover fluidez, pronunciación y confianza.</p>
-  <p>🧠 Basado en un enfoque comunicativo y colaborativo, este recurso permite practicar cuando quieras.</p>
-  <p>👩‍🏫 Diseñado para estudiantes que buscan mejorar su fluidez y empezar a hablar.</p>
-</div>
+    <h1 class="text-4xl font-bold mb-6 text-green-800">✨ Bienvenidos a Speak & Play</h1>
 
-  <h3>¡Explora, juega y activa tu voz en inglés!</h3>
+    <p class="text-lg mb-6">
+      ¿Te imaginas una plataforma donde hablar inglés sea tan divertido como jugar, cantar o contar historias? 
+      Speak & Play es una propuesta gamificada y digital pensada para transformar la forma en que los estudiantes 
+      de 9 a 12 años desarrollan su competencia oral en inglés. Aquí, la inseguridad se convierte en motivación, 
+      y la práctica se vuelve una aventura interactiva.
+    </p>
 
-  <!-- BOTONES -->
-  <a href="te-atreves.html" class="btn">¿Te atreves a hablar?</a>
-  <a href="activa-tu-voz.html" class="btn">Activa tu voz en inglés</a>
-  <a href="practica-jugando.html" class="btn">Practica jugando</a>
+    <!-- Ideas por línea -->
+    <div class="mt-4 space-y-2 text-lg">
+      <p>🎮 Retos, juegos de roles, karaoke y storytelling se combinan para promover fluidez, pronunciación y confianza.</p>
+      <p>🧠 Basado en un enfoque comunicativo y colaborativo, este recurso permite practicar cuando quieras.</p>
+      <p>👩‍🏫 Diseñado para estudiantes que buscan mejorar su fluidez y empezar a hablar.</p>
+    </div>
 
-  <!-- Banner inferior -->
-  <div class="footer-banner">
-    Recurso creado por estudiantes de Escenarios Educativos Inclusivos.
+    <!-- Botones principales -->
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="te-atreves.html" class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+        ¿Te atreves a hablar?
+      </a>
+      <a href="activa-tu-voz.html" class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+        Activa tu voz en inglés
+      </a>
+      <a href="practica-jugando.html" class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+        Practica jugando
+      </a>
+    </div>
+
+    <!-- Banner inferior -->
+    <div class="mt-12 p-4 bg-green-100 text-green-800 rounded-lg shadow text-center">
+      Recurso creado por estudiantes de Escenarios Educativos Inclusivos.
+    </div>
+
   </div>
-
-</div>
 
 </body>
 </html>
+
