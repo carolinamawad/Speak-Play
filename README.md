@@ -1,0 +1,1 @@
+La página ¡Practica jugando! está pensada para que los estudiantes practiquen inglés oral a través de retos divertidos e interactivos. El objetivo es que ganen confianza y fluidez mientras se divierten con actividades gamificadas.
