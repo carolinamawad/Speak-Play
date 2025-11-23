@@ -2,58 +2,173 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Practica jugando</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Practica jugando!</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #f4f1e8; /* Sepia suave */
+      color: #2d3b2a; /* Verde oscuro */
+    }
+  </style>
 </head>
-<body>
 
-<div class="container">
+<body class="font-sans leading-relaxed">
 
-<h1>🎯 ¡Practica jugando!</h1>
+  <div class="max-w-4xl mx-auto p-6">
 
-<p>Este espacio está hecho para estudiantes creativos que quieren aprender inglés jugando.</p>
+    <h1 class="text-3xl font-bold mb-6 text-green-800">✨ ¡Practica jugando!</h1>
 
-<p>
-Los retos convierten el miedo en motivación. Cada desafío es una oportunidad para ganar confianza, equivocarte sin miedo y crecer.
-</p>
+    <p class="text-lg mb-6">
+      Este espacio está hecho para estudiantes curiosos y creativos que quieren aprender inglés mientras se divierten.
+      También es ideal para grupos de clase que disfrutan competir, colaborar y superar retos juntos.
+    </p>
 
-<h2>🎯 Retos semanales</h2>
+    <!-- EL PODER DE LOS RETOS -->
+    <blockquote class="border-l-4 border-green-600 pl-4 italic text-green-800 mb-8">
+      Los retos son la chispa que convierte el miedo en motivación. Cada desafío que aceptas en inglés es una oportunidad para descubrir tu voz,
+      equivocarte sin miedo y ganar confianza. Aquí no se trata de competir por ser perfecto, sino de atreverte a jugar, hablar y crecer.
+    </blockquote>
 
-<ul>
-  <li><strong>Reto 1: Karaoke Challenge 🎤</strong> – Canta un fragmento y comparte tu grabación.</li>
-  <li><strong>Reto 2: Role-play Express 🎭</strong> – Dramatiza una situación en 1 minuto.</li>
-  <li><strong>Reto 3: Storytelling Game 📖</strong> – Construyan una historia en grupo.</li>
-  <li><strong>Reto 4: Wordwall Challenge 🧩</strong> – Juega y gana puntos por rapidez.</li>
-</ul>
+    <!-- RETOS SEMANALES -->
+    <h2 class="text-2xl font-bold mb-4 text-green-800">🎯 Retos semanales para activar tu voz</h2>
 
-<h2>🎯 Recursos para tus retos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 
-<h3>🎤 Karaoke y música</h3>
-<ul>
-  <li>Smule: https://www.smule.com/</li>
-  <li>Lyricstraining: https://lyricstraining.com/</li>
-</ul>
+      <!-- Karaoke Challenge -->
+      <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl">🎤</span>
+        <div>
+          <h3 class="font-semibold">Reto 1: Karaoke Challenge</h3>
+          <p>Canta un fragmento de tu canción favorita en inglés y comparte tu grabación.<br>Objetivo: soltar la voz y mejorar entonación.</p>
+        </div>
+      </div>
 
-<h3>🎭 Role-play</h3>
-<ul>
-  <li>ESL Fast – Diálogos: https://www.eslfast.com/</li>
-  <li>Drama Toolkit: https://dramaresource.com/drama-toolkit/</li>
-</ul>
+      <!-- Role-play Express -->
+      <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl">🎭</span>
+        <div>
+          <h3 class="font-semibold">Reto 2: Role-play Express</h3>
+          <p>Dramatiza una situación cotidiana (comprar helado, pedir direcciones, presentarte) en menos de 1 minuto.<br>Objetivo: practicar vocabulario y espontaneidad.</p>
+        </div>
+      </div>
 
-<h3>📖 Storytelling</h3>
-<ul>
-  <li>Story Dice: https://storydice.com/</li>
-  <li>The Literacy Shed: https://www.literacyshed.com/story-starters.html</li>
-</ul>
+      <!-- Storytelling Game -->
+      <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl">📖</span>
+        <div>
+          <h3 class="font-semibold">Reto 3: Storytelling Game</h3>
+          <p>Construye una historia en grupo: cada persona aporta una frase en inglés.<br>Objetivo: entrenar fluidez y creatividad.</p>
+        </div>
+      </div>
 
-<h3>🧩 Juegos digitales</h3>
-<ul>
-  <li>Quizlet: https://quizlet.com/</li>
-  <li>Kahoot!: https://kahoot.com/</li>
-</ul>
+      <!-- Wordwall Challenge -->
+      <div class="flex items-start gap-3 p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl">🧩</span>
+        <div>
+          <h3 class="font-semibold">Reto 4: Wordwall Challenge</h3>
+          <p>Participa en un juego digital de frases útiles y gana puntos por rapidez.<br>Objetivo: reforzar vocabulario y reacción oral.</p>
+        </div>
+      </div>
 
-<a href="index.html" class="btn">Volver a la página principal</a>
+    </div>
 
-</div>
+    <!-- RECURSOS CON BOTONES -->
+    <h2 class="text-2xl font-bold mb-4 text-green-800 text-center">📚 Recursos para tus retos de práctica</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+      <!-- Karaoke y música -->
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🎤</span>
+        <h3 class="font-semibold mb-2">Smule Karaoke</h3>
+        <a href="https://www.smule.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🎵</span>
+        <h3 class="font-semibold mb-2">Lyricstraining</h3>
+        <a href="https://lyricstraining.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <!-- Role-play y dramatización -->
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🎭</span>
+        <h3 class="font-semibold mb-2">ESL Fast – Dialogues</h3>
+        <a href="https://www.eslfast.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🎬</span>
+        <h3 class="font-semibold mb-2">Drama Toolkit</h3>
+        <a href="https://dramaresource.com/drama-toolkit/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <!-- Storytelling y creatividad -->
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">📖</span>
+        <h3 class="font-semibold mb-2">Story Dice</h3>
+        <a href="https://storydice.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">✏️</span>
+        <h3 class="font-semibold mb-2">The Literacy Shed</h3>
+        <a href="https://www.literacyshed.com/story-starters.html" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <!-- Juegos digitales -->
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🧩</span>
+        <h3 class="font-semibold mb-2">Quizlet</h3>
+        <a href="https://quizlet.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <span class="text-5xl mb-2">🎮</span>
+        <h3 class="font-semibold mb-2">Kahoot!</h3>
+        <a href="https://kahoot.com/" target="_blank" 
+           class="px-4 py-2 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+           Ir al recurso
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BOTÓN VOLVER -->
+    <div class="text-center mt-12">
+      <a href="index.html"
+         class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+         ⬅ Volver a la página principal
+      </a>
+    </div>
+
+  </div>
+
 </body>
 </html>
+
