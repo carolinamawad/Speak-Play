@@ -2,42 +2,98 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Activa tu voz en inglés</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #f4f1e8; /* Sepia suave */
+      color: #2d3b2a; /* Verde oscuro */
+    }
+  </style>
 </head>
-<body>
 
-<div class="container">
+<body class="font-sans leading-relaxed">
 
-<h1>🚀 Activa tu voz en inglés</h1>
+  <div class="max-w-3xl mx-auto p-6">
 
-<p>
-Aquí encontrarás actividades y recursos para ganar confianza y fluidez.  
-No se trata de hablar perfecto, sino de atreverte a usar tu voz.
-</p>
+    <h1 class="text-3xl font-bold text-green-800 mb-6">🚀 Activa tu voz en inglés</h1>
 
-<p><em>"Este espacio es tu lugar seguro para practicar, equivocarte y crecer. Tu voz en inglés importa."</em></p>
+    <p class="text-lg mb-6">
+      Aquí encontrarás actividades y recursos que te ayudarán a ganar confianza,
+      fluidez y espontaneidad al expresarte en inglés. La meta no es hablar perfecto,
+      sino atreverte a usar tu voz y disfrutar el proceso.
+    </p>
 
-<h2>🎥 Video central</h2>
+    <blockquote class="border-l-4 border-green-600 pl-4 italic text-green-800 mb-8">
+      "Este espacio es tu lugar seguro para practicar, equivocarte y crecer.
+      Tu voz en inglés importa."
+    </blockquote>
 
-<div class="card">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/vpukCCi0i0s" frameborder="0" allowfullscreen></iframe>
-</div>
+    <!-- VIDEO PRINCIPAL -->
+    <div class="mt-8 mb-12 text-center">
+      <iframe class="mx-auto rounded-xl shadow-lg"
+              width="100%" height="315"
+              src="https://www.youtube.com/embed/vpukCCi0i0s"
+              title="YouTube video player" frameborder="0"
+              allowfullscreen></iframe>
 
-<p>Si te gustó este video, suscríbete al canal 👉  
-  <a href="https://www.youtube.com/c/AprenderIngl%C3%A9sAmericano">Aprender Inglés Americano</a> 🔔
-</p>
+      <!-- Botón de suscripción -->
+      <a href="https://www.youtube.com/c/AprenderIngl%C3%A9sAmericano" 
+         target="_blank"
+         class="mt-4 inline-flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-5xl">🔔</span>
+          <span class="mt-1 text-sm font-medium">Aprender Inglés Americano</span>
+      </a>
+    </div>
 
-<h2>📚 Recursos para activar tu voz</h2>
+    <!-- TÍTULO DE RECURSOS -->
+    <h2 class="text-2xl font-bold mb-4 text-green-800 text-center">
+      📚 Recursos para activar tu voz en inglés
+    </h2>
 
-<ul>
-  <li><strong>Club de Inglés – Speaking:</strong> https://clubdeingles.com/aprender-ingles-gratis/speaking-ingles/</li>
-  <li><strong>Inglés con Roberto – Fluidez en 4 pasos:</strong> https://www.inglesconroberto.com/2025/02/como-mejorar-tu-fluidez-en-ingles-en-4-pasos.html</li>
-  <li><strong>Twenix – 15 estrategias:</strong> https://twenix.com/blog/hablar-ingles-con-fluidez/</li>
-</ul>
+    <!-- GRID DE RECURSOS -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6">
 
-<a href="index.html" class="btn">Volver a la página principal</a>
+      <!-- Club de Inglés -->
+      <a href="https://clubdeingles.com/aprender-ingles-gratis/speaking-ingles/" 
+         target="_blank"
+         class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-6xl">🗣️</span>
+          <p class="mt-2 text-center text-sm font-medium">Club de Inglés</p>
+      </a>
 
-</div>
+      <!-- Inglés con Roberto -->
+      <a href="https://www.inglesconroberto.com/2025/02/como-mejorar-tu-fluidez-en-ingles-en-4-pasos.html" 
+         target="_blank"
+         class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-6xl">✏️</span>
+          <p class="mt-2 text-center text-sm font-medium">Inglés con Roberto</p>
+      </a>
+
+      <!-- Twenix -->
+      <a href="https://twenix.com/blog/hablar-ingles-con-fluidez/" 
+         target="_blank"
+         class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-6xl">💡</span>
+          <p class="mt-2 text-center text-sm font-medium">Twenix</p>
+      </a>
+
+    </div>
+
+    <!-- BOTÓN VOLVER -->
+    <div class="text-center mt-12">
+      <a href="index.html"
+         class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+         ⬅ Volver a la página principal
+      </a>
+    </div>
+
+  </div>
+
 </body>
 </html>
+
