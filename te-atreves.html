@@ -2,167 +2,155 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Te atreves a hablar?</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<div class="container">
-
-<h1>💬 ¿Sientes nervios al hablar inglés?</h1>
-
-<p>
-Speak & Play comienza con un reto: descubrir cómo te sientes al expresarte en inglés.  
-Esta sección te invita a reflexionar, responder un mini test interactivo y dar el primer paso hacia la confianza.
-</p>
-
-<h2>🧪 Mini Test Diagnóstico</h2>
-
-<!-- ESTILOS DEL TEST -->
-<style>
-  .question-block {
-    background-color: var(--sepia-light);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-  }
-  .feedback {
-    margin-top: 10px;
-    font-style: italic;
-    color: var(--green-dark);
-    display: none;
-  }
-  select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid var(--green-dark);
-    background-color: #fff;
-  }
-</style>
-
-<!-- SCRIPT PARA MOSTRAR FEEDBACK SEGÚN SELECCIÓN -->
-<script>
-  function mostrarFeedback(idPregunta) {
-    const select = document.getElementById("p" + idPregunta);
-    const feedback = document.getElementById("f" + idPregunta);
-
-    if (select.value !== "") {
-      feedback.style.display = "block";
-    } else {
-      feedback.style.display = "none";
+  <style>
+    body {
+      background-color: #f4f1e8; /* Sepia suave */
+      color: #2d3b2a; /* Verde muy oscuro */
     }
-  }
-</script>
+  </style>
 
+</head>
+<body class="font-sans leading-relaxed">
 
-<!-- PREGUNTA 1 -->
-<div class="question-block">
-  <p><strong>Pregunta 1:</strong> ¿Qué sientes cuando tienes que hablar inglés en clase?</p>
+  <!-- Contenedor principal -->
+  <div class="max-w-3xl mx-auto p-6">
 
-  <select id="p1" onchange="mostrarFeedback(1)">
-    <option value="">Selecciona una opción</option>
-    <option>Un poco de nervios</option>
-    <option>Mucho miedo</option>
-    <option>Prefiero no hablar</option>
-    <option>Confianza y emoción</option>
-  </select>
+    <h1 class="text-3xl font-bold mb-6 text-green-800">💬 ¿Te atreves a hablar?</h1>
 
-  <p id="f1" class="feedback">
-    👉 Retroalimentación: Sentir nervios es común, pero reconocerlo es el primer paso para avanzar.
-  </p>
-</div>
+    <p class="text-lg mb-6">
+      Speak & Play comienza con un reto: descubrir cómo te sientes al expresarte en inglés.
+      Esta sección te invita a reflexionar, responder un test interactivo y dar el primer paso hacia la confianza.
+    </p>
 
+    <!-- TEST INTERACTIVO -->
+    <h2 class="text-2xl font-semibold mt-8 mb-4 text-green-700">🧪 Mini Test Diagnóstico</h2>
 
-<!-- PREGUNTA 2 -->
-<div class="question-block">
-  <p><strong>Pregunta 2:</strong> ¿Participas en actividades orales como juegos de roles o karaoke?</p>
+    <!-- Pregunta plantilla -->
+    <script>
+      function showFeedback(id) {
+        const select = document.getElementById(id);
+        const fb = document.getElementById(id + "-fb");
+        fb.classList.remove("hidden");
+      }
+    </script>
 
-  <select id="p2" onchange="mostrarFeedback(2)">
-    <option value="">Selecciona una opción</option>
-    <option>Nunca</option>
-    <option>A veces, si me siento cómodo/a</option>
-    <option>Sí, me encantan</option>
-    <option>Solo si me obligan</option>
-  </select>
+    <!-- Pregunta 1 -->
+    <div class="mb-6">
+      <label class="font-semibold">1. ¿Qué sientes cuando tienes que hablar inglés en clase?</label>
+      <select id="p1" onchange="showFeedback('p1')" class="block w-full mt-2 p-2 border rounded">
+        <option value="">Selecciona una opción</option>
+        <option>Un poco de nervios</option>
+        <option>Mucho miedo</option>
+        <option>Prefiero no hablar</option>
+        <option>Confianza y emoción</option>
+      </select>
+      <p id="p1-fb" class="hidden mt-2 text-green-700">👉 Sentir nervios es común, pero reconocerlo es el primer paso para avanzar.</p>
+    </div>
 
-  <p id="f2" class="feedback">
-    👉 Retroalimentación: Participar voluntariamente indica apertura al aprendizaje oral.
-  </p>
-</div>
+    <!-- Pregunta 2 -->
+    <div class="mb-6">
+      <label class="font-semibold">2. ¿Participas en actividades orales como juegos de roles o karaoke?</label>
+      <select id="p2" onchange="showFeedback('p2')" class="block w-full mt-2 p-2 border rounded">
+        <option value="">Selecciona una opción</option>
+        <option>Nunca</option>
+        <option>A veces, si me siento cómodo/a</option>
+        <option>Sí, me encantan</option>
+        <option>Solo si me obligan</option>
+      </select>
+      <p id="p2-fb" class="hidden mt-2 text-green-700">👉 Participar voluntariamente indica apertura al aprendizaje oral.</p>
+    </div>
 
+    <!-- Pregunta 3 -->
+    <div class="mb-6">
+      <label class="font-semibold">3. ¿Qué te impide hablar inglés con más frecuencia?</label>
+      <select id="p3" onchange="showFeedback('p3')" class="block w-full mt-2 p-2 border rounded">
+        <option value="">Selecciona una opción</option>
+        <option>No sé qué decir</option>
+        <option>Miedo a equivocarme</option>
+        <option>Nada, lo hago seguido</option>
+        <option>Vergüenza</option>
+      </select>
+      <p id="p3-fb" class="hidden mt-2 text-green-700">👉 Identificar el obstáculo permite diseñar estrategias para superarlo.</p>
+    </div>
 
-<!-- PREGUNTA 3 -->
-<div class="question-block">
-  <p><strong>Pregunta 3:</strong> ¿Qué te impide hablar inglés con más frecuencia?</p>
+    <!-- Pregunta 4 -->
+    <div class="mb-6">
+      <label class="font-semibold">4. ¿Cómo reaccionas si no entienden lo que dices en inglés?</label>
+      <select id="p4" onchange="showFeedback('p4')" class="block w-full mt-2 p-2 border rounded">
+        <option value="">Selecciona una opción</option>
+        <option>Me quedo callado/a</option>
+        <option>Me frustro</option>
+        <option>Cambio de idioma</option>
+        <option>Lo intento de nuevo</option>
+      </select>
+      <p id="p4-fb" class="hidden mt-2 text-green-700">👉 Intentarlo de nuevo demuestra resiliencia y deseo de comunicar.</p>
+    </div>
 
-  <select id="p3" onchange="mostrarFeedback(3)">
-    <option value="">Selecciona una opción</option>
-    <option>No sé qué decir</option>
-    <option>Miedo a equivocarme</option>
-    <option>Nada, lo hago seguido</option>
-    <option>Vergüenza</option>
-  </select>
+    <!-- Pregunta 5 -->
+    <div class="mb-6">
+      <label class="font-semibold">5. ¿Crees que puedes mejorar tu expresión oral en inglés?</label>
+      <select id="p5" onchange="showFeedback('p5')" class="block w-full mt-2 p-2 border rounded">
+        <option value="">Selecciona una opción</option>
+        <option>Tal vez, pero me cuesta</option>
+        <option>Sí, con práctica</option>
+        <option>No, es muy difícil</option>
+        <option>No estoy seguro/a</option>
+      </select>
+      <p id="p5-fb" class="hidden mt-2 text-green-700">👉 La creencia en tu capacidad es clave para el progreso.</p>
+    </div>
 
-  <p id="f3" class="feedback">
-    👉 Retroalimentación: Identificar el obstáculo permite diseñar estrategias para superarlo.
-  </p>
-</div>
+    <!-- SECCIÓN DE RECURSOS EN ÍCONOS -->
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold mb-4 text-green-800">💡 Recursos para superar el miedo a hablar en inglés</h2>
 
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-<!-- PREGUNTA 4 -->
-<div class="question-block">
-  <p><strong>Pregunta 4:</strong> ¿Cómo reaccionas si no entienden lo que dices en inglés?</p>
+        <!-- Storytelling -->
+        <a href="https://www.storynory.com/" target="_blank"
+          class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-5xl">📖</span>
+          <p class="mt-2 text-center text-sm font-medium">Storynory</p>
+        </a>
 
-  <select id="p4" onchange="mostrarFeedback(4)">
-    <option value="">Selecciona una opción</option>
-    <option>Me quedo callado/a</option>
-    <option>Me frustro</option>
-    <option>Cambio de idioma</option>
-    <option>Lo intento de nuevo</option>
-  </select>
+        <!-- Karaoke -->
+        <a href="https://www.youtube.com/singkingkaraoke" target="_blank"
+          class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-5xl">🎤</span>
+          <p class="mt-2 text-center text-sm font-medium">Sing King Karaoke</p>
+        </a>
 
-  <p id="f4" class="feedback">
-    👉 Retroalimentación: Intentarlo de nuevo demuestra resiliencia y deseo de comunicar.
-  </p>
-</div>
+        <!-- British Council -->
+        <a href="http://learnenglishkids.britishcouncil.org/listen-watch" target="_blank"
+          class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-5xl">🎧</span>
+          <p class="mt-2 text-center text-sm font-medium">British Council Kids</p>
+        </a>
 
+        <!-- BBC Learning -->
+        <a href="https://www.youtube.com/c/BBCLearningEnglish" target="_blank"
+          class="flex flex-col items-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+          <span class="text-5xl">🎥</span>
+          <p class="mt-2 text-center text-sm font-medium">BBC Learning English</p>
+        </a>
 
-<!-- PREGUNTA 5 -->
-<div class="question-block">
-  <p><strong>Pregunta 5:</strong> ¿Crees que puedes mejorar tu expresión oral en inglés?</p>
+      </div>
+    </section>
 
-  <select id="p5" onchange="mostrarFeedback(5)">
-    <option value="">Selecciona una opción</option>
-    <option>Tal vez, pero me cuesta</option>
-    <option>Sí, con práctica</option>
-    <option>No, es muy difícil</option>
-    <option>No estoy seguro/a</option>
-  </select>
+    <!-- Botón volver -->
+    <div class="text-center mt-10">
+      <a href="index.html"
+        class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">
+        ⬅ Volver a la página principal
+      </a>
+    </div>
 
-  <p id="f5" class="feedback">
-    👉 Retroalimentación: La creencia en tu capacidad es clave para el progreso.
-  </p>
-</div>
-
-
-
-<h2>💡 Recursos para superar el miedo a hablar en inglés</h2>
-
-<ul>
-  <li><strong>Storynory</strong> – Free Audio Stories for Kids: https://www.storynory.com/</li>
-  <li><strong>Sing King Karaoke</strong>: https://www.youtube.com/singkingkaraoke</li>
-  <li><strong>Top 50 Karaoke Playlist</strong>: https://www.youtube.com/playlist?list=PL8D4Iby0Bmm9y57_K3vBvkZiaGjIXD_x5</li>
-  <li><strong>British Council Kids – Listen & Watch</strong>: http://learnenglishkids.britishcouncil.org/listen-watch</li>
-  <li><strong>BBC Learning English – YouTube</strong>: https://www.youtube.com/c/BBCLearningEnglish</li>
-</ul>
-
-<br>
-
-<a href="index.html" class="btn">Volver a la página principal</a>
-
-</div>
+  </div>
 
 </body>
 </html>
