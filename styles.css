@@ -1,0 +1,64 @@
+/* Colores principales verdes y sepias */
+:root {
+  --green-dark: #2e4f38;
+  --green-light: #7aa87b;
+  --sepia: #a0816c;
+  --sepia-light: #d2bca3;
+  --cream: #f7f2e9;
+  --text: #2a2a2a;
+}
+
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Contenedores */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: var(--green-dark);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px 0;
+  background-color: var(--green-dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--green-light);
+}
+
+/* Banner inferior */
+.footer-banner {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: var(--sepia);
+  border-radius: 8px;
+}
+
+/* Tarjetas */
+.card {
+  background-color: var(--sepia-light);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
